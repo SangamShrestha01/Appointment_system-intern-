@@ -5,6 +5,7 @@ import ErrorMiddleware from "./middleware/error.js";
 import authRoutes from './routes/user.route.js'
 import doctorRoutes from './routes/doctor.routes.js'
 import bookRoutes from './routes/appointment.routes.js'
+import paymentRoutes from './routes/payment.routes.js'
 
 dotenv.config();
 
@@ -20,6 +21,7 @@ connectDb();
 app.use('/api/v1/auth',authRoutes)
 app.use('/api/v1/doctor',doctorRoutes)
 app.use('/api/v1/book',bookRoutes)
+app.use('/api/v1/payment',paymentRoutes)
 
 
 app.get("/", (req, res) => {
